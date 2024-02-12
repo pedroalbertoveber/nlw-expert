@@ -1,0 +1,24 @@
+### Variables
+@baseUrl=http://localhost:3333
+
+
+### POST CREATE POLLS
+POST {{baseUrl}}/polls
+Content-Type: application/json
+
+{
+  "title": "Qual é o melhor framework Node.js?",
+  "options": ["Nest", "Express", "Fastify"]
+}
+
+### POST VOTE ON POLL
+POST {{baseUrl}}/polls/7ee875ba-99c6-4d43-95f1-50269eb4b6d0/votes
+Content-Type: application/json
+
+{
+  "pollOptionId": "707274f6-e804-4a06-952d-75cb6f4f7a36"
+}
+
+### GET POLL
+GET {{baseUrl}}/polls/7ee875ba-99c6-4d43-95f1-50269eb4b6d0
+Content-Type: application/json
